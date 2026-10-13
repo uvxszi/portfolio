@@ -689,6 +689,22 @@ a.card:hover {
   border-bottom-color: var(--c, var(--accent));
 }
 
+/* Category headings: shown when the panels are stacked (no JS), kept for screen
+   readers and search engines once the tabs take over. */
+.panel-title {
+  margin: 3rem 0 0;
+}
+
+.tabs-ready > .panel > .panel-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .window {
   margin-top: 1.25rem;
   border: 1px solid var(--c, var(--accent));

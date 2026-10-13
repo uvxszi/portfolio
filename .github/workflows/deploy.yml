@@ -1,0 +1,56 @@
+name: Deploy site
+
+# On every push to main: build the site, publish it to GitHub Pages, then tell IndexNow
+# which pages changed. Needs Settings > Pages > Source set to "GitHub Actions".
+# Running it by hand from the Actions tab republishes and submits every page.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish instead of cancelling it when a newer push arrives.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0 # full history, so the sitemap can date each page by its last commit
+      - name: Build _site
+        run: node tools/build.js
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
+
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Submit changed pages
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: node tools/indexnow.js

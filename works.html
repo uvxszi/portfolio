@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Works — uvxszi</title>
+  <title>Works by uvxszi — Software, games, writing, art, and community projects</title>
   <meta name="description" content="Works by uvxszi: software, game development, writing and research, art, content creation, and community projects.">
   <link rel="canonical" href="https://uvxszi.com/works">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Works — uvxszi">
+  <meta property="og:title" content="Works by uvxszi — Software, games, writing, art, and community projects">
   <meta property="og:description" content="Software, game dev, writing and research, art, content creation, and community projects.">
   <meta property="og:url" content="https://uvxszi.com/works">
   <link rel="icon" href="/brand/bimi-logo.svg" type="image/svg+xml">
@@ -41,10 +41,9 @@
       <p class="lead">Things I’ve made, sorted by kind. Pick a category to look around.</p>
     </div>
 
-    <!-- The tabs and cards are built from assets/works-data.js. Edit that file to add or change works. -->
-    <div class="works" data-works>
-      <noscript><p>This page needs JavaScript turned on to show the list of works.</p></noscript>
-    </div>
+    <!-- The list is written by assets/works-render.js from assets/works-data.js (edit that file to add works).
+         On GitHub the deploy workflow fills it in as plain HTML; locally the browser does. -->
+    <div class="works" data-works data-tabs></div>
   </main>
 
   <footer class="site-footer">
@@ -55,6 +54,7 @@
   </footer>
 
   <script src="/assets/works-data.js"></script>
+  <script src="/assets/works-render.js"></script>
   <script src="/assets/script.js"></script>
 </body>
 </html>

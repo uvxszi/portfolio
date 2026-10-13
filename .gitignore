@@ -425,3 +425,6 @@ FodyWeavers.xsd
 
 # Local preview config
 .claude/
+
+# Output of tools/build.js (built on GitHub by the deploy workflow)
+_site/
