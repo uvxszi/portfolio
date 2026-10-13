@@ -16,7 +16,7 @@ Links are written without `.html` (`/about`, `/works`) and start from the site r
 
 Open `assets/works-data.js`, find the category and tab it belongs in, and add an entry to that tab's `items`:
 
-```js
+```text
 {
   title: 'Name of the work',
   summary: 'One or two sentences about it.',
