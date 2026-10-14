@@ -1,6 +1,6 @@
 # uvxszi's portfolio website
 
-Static site for [uvxszi.com](https://uvxszi.com), hosted on GitHub Pages and published by a GitHub Actions workflow on every push to `main`.
+Static site for [uvxszi.com](https://uvxszi.com), hosted on GitHub Pages and published by GitHub Actions workflow on every push to `main`.
 
 - `index.html`, `works.html`, `about.html`, `services.html`, `contact.html` — the pages
 - `404.html` — shown by GitHub Pages for any missing address
