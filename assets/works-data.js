@@ -27,7 +27,28 @@ window.WORKS = [
     name: 'Software',
     color: 'teal',
     tabs: [
-      { name: 'Apps', items: [] },
+      {
+        name: 'Apps',
+        items: [
+          {
+            title: 'MacroMagi',
+            summary: 'A portable auto clicker and visual macro editor for keyboard, mouse and controller input, with a canvas for building and training your own AI models.',
+            icon: '/assets/works/MacroMagi-icon.png',
+            links: [
+              { label: 'GitHub', url: 'https://github.com/uvxszi/MacroMagi' },
+            ],
+          },
+          {
+            title: 'ClumsyMagi',
+            summary: 'A network condition simulator for Windows: a Rust and egui rewrite of clumsy that adds lag, packet loss, throttling and more to a chosen app or game, with live graphs and one-click quick lag.',
+            icon: '/assets/works/ClumsyMagi-icon.png',
+            links: [
+              { label: 'GitHub', url: 'https://github.com/uvxszi/ClumsyMagi' },
+            ],
+          },
+
+        ],
+      },
       {
         name: 'Plug-ins & Add-ons',
         items: [
@@ -42,7 +63,20 @@ window.WORKS = [
           },
         ],
       },
-      { name: 'Contributions', items: [] },
+      {
+        name: 'Contributions',
+        items: [
+          {
+            title: 'deckcraft: Insert 3D Models',
+            summary: 'Added 3D models to deckcraft, an open-source PowerPoint rebuilt in Rust: insert GLB, glTF, OBJ, STL, PLY and 3MF files, turn them in 3D, animate them with the 3D effects and Morph, and save them to PPTX.',
+            icon: '/assets/works/deckcraft-icon.png',
+            links: [
+              { label: 'Pull request', url: 'https://github.com/storytold/deckcraft/pull/743' },
+              { label: 'Branch', url: 'https://github.com/uvxszi/deckcraft/tree/feat/3d-models' },
+            ],
+          },
+        ],
+      },
     ],
   },
   {
@@ -90,6 +124,20 @@ window.WORKS = [
     color: 'moss',
     tabs: [
       {
+        name: 'Discord Servers & Subreddits',
+        items: [
+          {
+            title: 'Strange Encounters Discord Server',
+            summary: 'A Discord for all types of developers',
+            icon: '/assets/works/strange-encounters-icon.png',
+            links: [
+              { label: 'Strange Encounters Discord', url: 'https://discord.gg/h4Hp2bKrHd' },
+            ],
+          },
+        ],
+      },
+      { name: 'Events', items: [] },
+      {
         name: 'Sayn',
         items: [
           {
@@ -104,20 +152,6 @@ window.WORKS = [
           },
         ],
       },
-      {
-        name: 'Discord Servers & Subreddits',
-        items: [
-          {
-            title: 'Strange Encounters Discord Server',
-            summary: 'A Discord for all types of developers',
-            icon: '/assets/works/strange-encounters-icon.png',
-            links: [
-              { label: 'Strange Encounters Discord', url: 'https://discord.gg/h4Hp2bKrHd' },
-            ],
-          },
-        ],
-      },
-      { name: 'Events', items: [] },
     ],
   },
 ];
